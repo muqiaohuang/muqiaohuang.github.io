@@ -45,6 +45,12 @@
   color: #dfae9f;
 }
 
+@media (min-width: 721px) {
+  .hero {
+    padding-left: clamp(242px, 22vw, 380px);
+  }
+}
+
 @media (max-width: 720px) {
   .section-index {
     position: sticky;
@@ -71,5 +77,10 @@
 
   .section-index-slot {
     display: none;
+  }
+
+  .hero {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
