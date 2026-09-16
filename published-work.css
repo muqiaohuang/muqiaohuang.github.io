@@ -1,0 +1,8 @@
+.project-venue,
+.project-summary {
+  display: block;
+}
+
+.project-summary {
+  margin-top: .55em;
+}
