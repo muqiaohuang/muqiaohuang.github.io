@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="published-work.css" />
     <link rel="stylesheet" href="documents.css" />
+    <link rel="stylesheet" href="section-index.css" />
   </head>
   <body>
     <main>
@@ -16,6 +17,12 @@
         <a class="wordmark" href="#top" aria-label="Muqiao Huang — home">M.H.</a>
         <nav aria-label="Primary navigation"><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#documents">Documents</a></nav>
       </header>
+      <nav class="section-index" aria-label="Page index">
+        <a class="is-active" href="#top" data-index-for="top">Home</a>
+        <a href="#research" data-index-for="research"><span>#1</span> Research</a>
+        <a href="#teaching" data-index-for="teaching"><span>#2</span> Teaching</a>
+        <a href="#documents" data-index-for="documents"><span>#3</span> Documents</a>
+      </nav>
 
       <section class="hero" id="top" aria-labelledby="intro-heading">
         <div class="hero-copy-wrap">
@@ -33,7 +40,7 @@
       </section>
 
       <section class="section work" id="research" aria-labelledby="work-heading">
-        <div class="section-label">01 / Research</div>
+        <div class="section-index-slot" aria-hidden="true"></div>
         <div>
           <h2 id="work-heading">Research</h2>
           <div class="project-list">
@@ -51,7 +58,7 @@
       </section>
 
       <section class="section teaching" id="teaching" aria-labelledby="teaching-heading">
-        <div class="section-label">02 / Teaching</div>
+        <div class="section-index-slot" aria-hidden="true"></div>
         <div><h2 id="teaching-heading">Teaching</h2>
           <div class="teaching-card"><div><p class="course">ACTSC 446 · Fall 2026</p><h3>Mathematics of Financial Market</h3></div><p>University of Waterloo<br /><strong>Topics:</strong> Arbitrage-free pricing · Black–Scholes model</p></div>
           <div class="teaching-card muted-card"><div><p class="course">STAT 231 · Spring 2025</p><h3>Statistics</h3></div><p>University of Waterloo<br /><strong>Topics:</strong> Estimation · Hypothesis testing</p></div>
@@ -59,7 +66,7 @@
       </section>
 
       <section class="section documents" id="documents" aria-labelledby="documents-heading">
-        <div class="section-label">03 / Documents</div>
+        <div class="section-index-slot" aria-hidden="true"></div>
         <div>
           <h2 id="documents-heading">Documents</h2>
           <div class="document-list">
@@ -71,5 +78,6 @@
       </section>
       <footer><span>© 2026 Muqiao (James) Huang</span><span>University of Waterloo · Ontario, Canada</span></footer>
     </main>
+    <script src="section-index.js"></script>
   </body>
 </html>
