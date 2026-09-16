@@ -19,5 +19,7 @@
 
   window.addEventListener("scroll", updateIndex, { passive: true });
   window.addEventListener("resize", updateIndex);
+  window.addEventListener("hashchange", () => requestAnimationFrame(updateIndex));
   updateIndex();
+  requestAnimationFrame(() => requestAnimationFrame(updateIndex));
 })();
