@@ -1,0 +1,75 @@
+.section-index {
+  position: fixed;
+  top: 106px;
+  left: clamp(20px, 4vw, 68px);
+  z-index: 10;
+  display: grid;
+  gap: 3px;
+  min-width: 172px;
+  padding: 10px;
+  border: 1px solid rgba(200, 193, 183, .8);
+  background: rgba(243, 240, 235, .94);
+  box-shadow: 0 8px 22px rgba(28, 27, 32, .12);
+  backdrop-filter: blur(8px);
+}
+
+.section-index a {
+  display: block;
+  padding: 9px 10px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  transition: background .18s ease, color .18s ease;
+}
+
+.section-index a span {
+  display: inline-block;
+  width: 30px;
+  color: var(--rose);
+}
+
+.section-index a:hover,
+.section-index a:focus-visible {
+  color: var(--ink);
+  background: #e6dfd6;
+}
+
+.section-index a.is-active {
+  color: #f8f4ed;
+  background: var(--night);
+}
+
+.section-index a.is-active span {
+  color: #dfae9f;
+}
+
+@media (max-width: 720px) {
+  .section-index {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    min-width: 0;
+    width: 100%;
+    overflow-x: auto;
+    padding: 7px 14px;
+    border-width: 0 0 1px;
+    box-shadow: 0 5px 14px rgba(28, 27, 32, .1);
+  }
+
+  .section-index a {
+    padding: 8px 9px;
+    white-space: nowrap;
+  }
+
+  .section-index a span {
+    width: auto;
+    margin-right: 4px;
+  }
+
+  .section-index-slot {
+    display: none;
+  }
+}
