@@ -6,8 +6,12 @@
     const threshold = window.innerHeight * 0.38;
     let current = sections[0];
 
-    for (const section of sections) {
-      if (section.getBoundingClientRect().top <= threshold) current = section;
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      current = sections.at(-1);
+    } else {
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= threshold) current = section;
+      }
     }
 
     for (const link of links) {
@@ -20,6 +24,7 @@
   window.addEventListener("scroll", updateIndex, { passive: true });
   window.addEventListener("resize", updateIndex);
   window.addEventListener("hashchange", () => requestAnimationFrame(updateIndex));
+  window.addEventListener("load", () => setTimeout(updateIndex, 0));
   updateIndex();
-  requestAnimationFrame(() => requestAnimationFrame(updateIndex));
+  setTimeout(updateIndex, 120);
 })();
